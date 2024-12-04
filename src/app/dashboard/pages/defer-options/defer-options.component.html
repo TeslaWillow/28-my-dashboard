@@ -1,6 +1,6 @@
 <shared-title title="Defer Trigger" />
 
-<section>
+<section class="my-2">
   <h1 class="text-xl">Interacciones</h1>
 
   <hr class="my-2">
@@ -14,6 +14,92 @@
   } @placeholder {
     <div class="w-full h-100 bg-purple-100">
       Click en el div
+    </div>
+  }
+
+</section>
+
+<section class="my-2">
+
+  <button
+    #btnInteraction
+    class="my-2 p-2 bg-blue-700 text-white transition-all rounded hover:opacity-50">
+    Click me!
+  </button>
+
+  @defer ( on interaction(btnInteraction) ) {
+    <shared-heavy-loaders-fast
+      cssClass="bg-blue-100 h-20"
+    >
+      <span>On Interaction</span>
+    </shared-heavy-loaders-fast>
+  } @placeholder {
+    <div class="w-full h-100 bg-purple-100">
+      Click en el botón
+    </div>
+  }
+
+</section>
+
+<section class="my-2">
+
+  @defer ( on hover ) {
+    <shared-heavy-loaders-fast
+      cssClass="bg-blue-100 h-20"
+    >
+      <span>On Hover</span>
+    </shared-heavy-loaders-fast>
+  } @placeholder {
+    <div class="w-full h-100 bg-purple-100">
+      Hover en el div
+    </div>
+  }
+
+</section>
+
+<section class="my-2">
+
+  @defer ( on immediate ) {
+    <shared-heavy-loaders-fast
+      cssClass="bg-blue-100 h-20"
+    >
+      <span>On Immediate</span>
+    </shared-heavy-loaders-fast>
+  } @placeholder {
+    <div class="w-full h-100 bg-purple-100">
+      Inmediato
+    </div>
+  }
+
+</section>
+
+<section class="my-2">
+
+  @defer ( on timer(2000) ) {
+    <shared-heavy-loaders-fast
+      cssClass="bg-blue-100 h-20"
+    >
+      <span>On Timer - 2000</span>
+    </shared-heavy-loaders-fast>
+  } @placeholder {
+    <div class="w-full h-100 bg-purple-100">
+      Espere 2 seg.
+    </div>
+  }
+
+</section>
+
+<section class="my-2">
+
+  @defer ( on hover; prefetch on idle ) {
+    <shared-heavy-loaders-fast
+      cssClass="bg-blue-100 h-20"
+    >
+      <span>On Hover - idle</span>
+    </shared-heavy-loaders-fast>
+  } @placeholder {
+    <div class="w-full h-100 bg-purple-100">
+      Idle + Hover
     </div>
   }
 
