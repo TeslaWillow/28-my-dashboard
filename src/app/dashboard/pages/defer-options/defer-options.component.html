@@ -1,1 +1,20 @@
-<p>defer-options works!</p>
+<shared-title title="Defer Trigger" />
+
+<section>
+  <h1 class="text-xl">Interacciones</h1>
+
+  <hr class="my-2">
+
+  @defer ( on interaction ) {
+    <shared-heavy-loaders-fast
+      cssClass="bg-blue-100 h-20"
+    >
+      <span>On Interaction</span>
+    </shared-heavy-loaders-fast>
+  } @placeholder {
+    <div class="w-full h-100 bg-purple-100">
+      Click en el div
+    </div>
+  }
+
+</section>
