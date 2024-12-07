@@ -1,0 +1,14 @@
+<div class="card">
+  <span>
+    {{ product().name }}
+  </span>
+  <h2 class="font-bold text-sm my-2">
+    # {{ product().id }}
+  </h2>
+  <button
+    class="button"
+    (click)="incrementQuantity();"
+  >
+    Agregar {{ product().quantity }}
+  </button>
+</div>
